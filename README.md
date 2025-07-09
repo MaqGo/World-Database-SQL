@@ -1,6 +1,13 @@
 # 🌍 World Database SQL Queries
 
-This project contains a collection of SQL queries executed on the MySQL World Sample Database using MySQL Workbench.
+This project contains a collection of SQL queries executed on the MySQL World Sample Database using MySQL Workbench. 
+
+This project demonstrates how to:
+
+- Retrieve, filter, and aggregate data.
+- Join tables to combine related data.
+- Sort and group results for better insights.
+- Use scenarios to solve real-world data problems.
 
 # 🛠 Tools Used
 
@@ -16,29 +23,32 @@ This project contains a collection of SQL queries executed on the MySQL World Sa
 # 📊 SAMPLE QUARIES
 
 # 1. Count Cities in the USA
-## Count Cities in USA: Scenario: You've been tasked with conducting a demographic analysis of cities in the United States. Your first step is to determine the total number of cities within the country to provide a baseline for further analysis. 
+
+Count Cities in USA: Scenario: You've been tasked with conducting a demographic analysis of cities in the United States. Your first step is to determine the total number of cities within the country to provide a baseline for further analysis. 
 
 💻 SQL Query:
 
 SELECT COUNT(Name), CountryCode
-FROM city
-WHERE CountryCode = 'USA';
+FROM city                      
+WHERE CountryCode = 'USA';     
 
 - 📌 Result: 274 cities in the USA.
 
 # 2. Countries by Highest Life Expectancy
-## Country with Highest Life Expectancy: Scenario: As part of a global health initiative, you've been assigned to identify the country with the highest life expectancy. This information will be crucial for prioritising healthcare resources and interventions. 
+
+Country with Highest Life Expectancy: Scenario: As part of a global health initiative, you've been assigned to identify the country with the highest life expectancy. This information will be crucial for prioritising healthcare resources and interventions. 
 
 💻 SQL Query:
 
-SELECT Name, lifeExpectancy
-FROM country
-ORDER BY lifeExpectancy DESC;
+SELECT Name, lifeExpectancy                       
+FROM country                                      
+ORDER BY lifeExpectancy DESC;                     
 
-- 📌 Result: Top countries include Andorra, Macao, San Marino, Japan, etc.
+- 📌 Result: Andorra, Macao, San Marino, Japan, etc.
   
 # 3. Cities Starting with "New"
-## New Year Promotion: Featuring Cities with 'New : Scenario: In anticipation of the upcoming New Year, your travel agency is gearing up for a special promotion featuring cities with names including the word 'New'. You're tasked with swiftly compiling a list of all cities from around the world. This curated selection will be essential in creating promotional materials and enticing travellers with exciting destinations to kick off the New Year in style. 
+
+New Year Promotion: Featuring Cities with 'New : Scenario: In anticipation of the upcoming New Year, your travel agency is gearing up for a special promotion featuring cities with names including the word 'New'. You're tasked with swiftly compiling a list of all cities from around the world. This curated selection will be essential in creating promotional materials and enticing travellers with exciting destinations to kick off the New Year in style. 
 
 💻 SQL Query:
 
@@ -49,7 +59,8 @@ WHERE Name LIKE "New%";
 - 📌 Result: Newcastle, New Orleans, etc.
 
 # 4. Top 10 Most Populated Cities
-## Display Columns with Limit (First 10 Rows): Scenario: You're tasked with providing a brief overview of the most populous cities in the world. To keep the report concise, you're instructed to list only the first 10 cities by population from the database. 
+
+Display Columns with Limit (First 10 Rows): Scenario: You're tasked with providing a brief overview of the most populous cities in the world. To keep the report concise, you're instructed to list only the first 10 cities by population from the database. 
 
 💻 SQL Query:
 
@@ -61,7 +72,8 @@ LIMIT 10;
 - 📌 Result: Cities like Mumbai, Seoul, São Paulo, Shanghai, etc.
   
 # 5. Cities with population greater than or equal to 2 million, ordered by population descending
-## Cities with Population Larger than 2,000,000: Scenario: A real estate developer is interested in cities with substantial population sizes for potential investment opportunities. You're tasked with identifying cities from the database with populations exceeding 2 million to focus their research efforts. 
+
+Cities with Population Larger than 2,000,000: Scenario: A real estate developer is interested in cities with substantial population sizes for potential investment opportunities. You're tasked with identifying cities from the database with populations exceeding 2 million to focus their research efforts. 
 
 💻 SQL Query:
 
@@ -83,7 +95,8 @@ ORDER BY population DESC;
 | New York         | 8088276    |
 
 # 6. Query 3: Cities with Names Starting with ‘Be’
-## Cities Beginning with 'Be' Prefix: Scenario: A travel blogger is planning a series of articles featuring cities with unique names. You're tasked with compiling a list of cities from the database that start with the prefix 'Be' to assist in the blogger's content creation process. 
+
+Cities Beginning with 'Be' Prefix: Scenario: A travel blogger is planning a series of articles featuring cities with unique names. You're tasked with compiling a list of cities from the database that start with the prefix 'Be' to assist in the blogger's content creation process. 
 
 💻 SQL Query:
 
@@ -95,7 +108,8 @@ WHERE Name LIKE 'Be%';
 Béjaïa, Béchar, Benguela...             
 
 # 7. Cities with population between 500,000 and 1,000,000
-## Cities with Population Between 500,000-1,000,000: Scenario: An urban planning committee needs to identify mid-sized cities suitable for infrastructure development projects. You're tasked with identifying cities with populations ranging between 500,000 and 1 million to inform their decision-making process. 
+
+Cities with Population Between 500,000-1,000,000: Scenario: An urban planning committee needs to identify mid-sized cities suitable for infrastructure development projects. You're tasked with identifying cities with populations ranging between 500,000 and 1 million to inform their decision-making process. 
 
 💻 SQL Query:
 
@@ -110,7 +124,8 @@ Adelaide — 978100
 (and more, total: 33 rows returned)
 
 # 8. List all city names in ascending order
-## Display Cities Sorted by Name in Ascending Order: Scenario: A geography teacher is preparing a lesson on alphabetical order using city names. You're tasked with providing a sorted list of cities from the database in ascending order by name to support the lesson plan. 
+
+ Display Cities Sorted by Name in Ascending Order: Scenario: A geography teacher is preparing a lesson on alphabetical order using city names. You're tasked with providing a sorted list of cities from the database in ascending order by name to support the lesson plan. 
 
 💻 SQL Query:
 
@@ -125,7 +140,8 @@ Abbotsford
 (and more, total: 1000 rows returned)
 
 # 9. City with the largest population
-## Most Populated City: Scenario: A real estate investment firm is interested in cities with significant population densities for potential development projects. You're tasked with identifying the most populated city from the database to guide their investment decisions and strategic planning. 
+
+Most Populated City: Scenario: A real estate investment firm is interested in cities with significant population densities for potential development projects. You're tasked with identifying the most populated city from the database to guide their investment decisions and strategic planning. 
 
 💻 SQL Query:
 
@@ -138,7 +154,8 @@ LIMIT 1;
 Mumbai — 10,500,000
 
 # 10. Count of each city name grouped and sorted alphabetically
-## City Name Frequency Analysis: Supporting Geography Education Scenario: In a geography class, students are learning about the distribution of city names around the world. The teacher, in preparation for a lesson on city name frequencies, wants to provide students with a list of unique city names sorted alphabetically, along with their respective counts of occurrences in the database. You're tasked with this sorted list to support the geography teacher. 
+
+City Name Frequency Analysis: Supporting Geography Education Scenario: In a geography class, students are learning about the distribution of city names around the world. The teacher, in preparation for a lesson on city name frequencies, wants to provide students with a list of unique city names sorted alphabetically, along with their respective counts of occurrences in the database. You're tasked with this sorted list to support the geography teacher. 
 
 💻 SQL Query:
 
@@ -152,7 +169,8 @@ ORDER BY name ASC;
 (and more, total: 101 rows returned)
 
 # 11. City with Smallest Population
-## City with the Lowest Population: Scenario: A census bureau is conducting an analysis of urban population distribution. You're tasked with identifying the city with the lowest population from the database to provide a comprehensive overview of demographic trends. 
+
+City with the Lowest Population: Scenario: A census bureau is conducting an analysis of urban population distribution. You're tasked with identifying the city with the lowest population from the database to provide a comprehensive overview of demographic trends. 
 
 💻 SQL Query:
 
@@ -165,7 +183,8 @@ LIMIT 1;
  Adamstown | 42         |
 
 # 12. Country with Largest Population
-## Country with Largest Population: Scenario: A global economic research institute requires data on countries with the largest populations for a comprehensive analysis. You're tasked with identifying the country with the highest population from the database to provide valuable insights into demographic trends. 
+
+Country with Largest Population: Scenario: A global economic research institute requires data on countries with the largest populations for a comprehensive analysis. You're tasked with identifying the country with the highest population from the database to provide valuable insights into demographic trends. 
 
 💻 SQL Query:
 
@@ -178,7 +197,8 @@ LIMIT 1;
  China | 1,277,558,000 
 
 # 13. Capital City of Spain
-## Capital of Spain: Scenario: A travel agency is organising tours across Europe and needs accurate information on capital cities. You're tasked with identifying the capital of Spain from the database to ensure itinerary accuracy and provide travellers with essential destination information. 
+
+Capital of Spain: Scenario: A travel agency is organising tours across Europe and needs accurate information on capital cities. You're tasked with identifying the capital of Spain from the database to ensure itinerary accuracy and provide travellers with essential destination information. 
 
 💻 SQL Query:
 
@@ -193,7 +213,8 @@ AND country.name = 'Spain';
   Spain   | Madrid 
 
 # 14. Cities and Their Continents
-## Cities in Europe: Scenario: A European cultural exchange program is seeking to connect students with cities across the continent. You're tasked with compiling a list of cities located in Europe from the database to facilitate program planning and student engagement.
+
+Cities in Europe: Scenario: A European cultural exchange program is seeking to connect students with cities across the continent. You're tasked with compiling a list of cities located in Europe from the database to facilitate program planning and student engagement.
 
 💻 SQL Query:
 
@@ -217,7 +238,8 @@ ON city.countrycode = country.code;
 | South Hill     | North America |
 
 # 15. Average Population by Country
-## Average Population by Country: Scenario: A demographic research team is conducting a comparative analysis of population distributions across countries. You're tasked with calculating the average population for each country from the database to provide valuable insights into global population trends. 
+
+Average Population by Country: Scenario: A demographic research team is conducting a comparative analysis of population distributions across countries. You're tasked with calculating the average population for each country from the database to provide valuable insights into global population trends. 
 
 💻 SQL Query:
 
@@ -240,7 +262,8 @@ GROUP BY Name;
 | ...                  | ...             |
 
 # 16. Country Capitals with Population
-## Capital Cities Population Comparison: Scenario: A statistical analysis firm is examining population distributions between capital cities worldwide. You're tasked with comparing the populations of capital cities from different countries to identify trends and patterns in urban demographics. 
+
+Capital Cities Population Comparison: Scenario: A statistical analysis firm is examining population distributions between capital cities worldwide. You're tasked with comparing the populations of capital cities from different countries to identify trends and patterns in urban demographics. 
 
 💻 SQL Query:
 
@@ -265,7 +288,8 @@ WHERE capital IS NOT NULL;
 | ...                  | ...              | ...        |
 
 # 17. Countries Ordered by Population Density (Lowest First)
-## Countries with Low Population Density: Scenario: An agricultural research institute is studying countries with low population densities for potential agricultural development projects. You're tasked with identifying countries with sparse populations from the database to support the institute's research efforts. 
+
+Countries with Low Population Density: Scenario: An agricultural research institute is studying countries with low population densities for potential agricultural development projects. You're tasked with identifying countries with sparse populations from the database to support the institute's research efforts. 
 
 💻 SQL Query:
 
@@ -296,7 +320,8 @@ LIMIT 20;
 
   
 # 18.Cities Ordered by GDP Per Capita
-## Cities with High GDP per Capita: Scenario: An economic consulting firm is analysing cities with high GDP per capita for investment opportunities. You're tasked with identifying cities with above-average GDP per capita from the database to assist the firm in identifying potential investment destinations. 
+
+Cities with High GDP per Capita: Scenario: An economic consulting firm is analysing cities with high GDP per capita for investment opportunities. You're tasked with identifying cities with above-average GDP per capita from the database to assist the firm in identifying potential investment destinations. 
 
 💻 SQL Query:
 
@@ -327,7 +352,8 @@ ORDER BY
 | Bandar Seri Begawan      | BRN         | Brunei      | 21484          | 0.04         |
 
 # 19. Top Cities by Population with Offset
-## Display Columns with Limit (Rows 31-40): Scenario: A market research firm requires detailed information on cities beyond the top rankings for a comprehensive analysis. You're tasked with providing data on cities ranked between 31st and 40th by population to ensure a thorough understanding of urban demographics.
+
+Display Columns with Limit (Rows 31-40): Scenario: A market research firm requires detailed information on cities beyond the top rankings for a comprehensive analysis. You're tasked with providing data on cities ranked between 31st and 40th by population to ensure a thorough understanding of urban demographics.
 
 💻 SQL Query:
 
@@ -352,6 +378,11 @@ LIMIT 10 OFFSET 30;
 | Dhaka               | BGD         | 3,612,850  |
 | Renrka              | DEU         | 3,386,467  |
 
+# 📚 Learning Highlights
+
+✅ Practice advanced SELECT, WHERE, ORDER BY, GROUP BY, and JOIN operations.
+✅ Explore real-world use cases for SQL queries.
+✅ Build a foundation for database analysis and reporting.
 
 # 📷 Screenshots
 
