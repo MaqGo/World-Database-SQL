@@ -1,11 +1,56 @@
-# World-Database-SQL
-![image](https://github.com/user-attachments/assets/ebb8255d-9ab4-417c-950b-775e6b533d1c)
-![image](https://github.com/user-attachments/assets/6164002c-8f47-4b5b-8d82-71651e3f4ae9)
-![image](https://github.com/user-attachments/assets/dd845f1d-c7b8-4d82-abdc-757f50c21821)
-![image](https://github.com/user-attachments/assets/b45ca8f2-5e3b-4505-9cdd-a8bc4df2728f)
-![image](https://github.com/user-attachments/assets/ee61da87-2b8a-40bd-8a92-783c30f26f83)
-![image](https://github.com/user-attachments/assets/441d7b61-744d-4e00-8bc4-5dcc2d1f1577)
- will carry on ... you ll copy 7 
+# 🌍 World Database SQL Queries
+
+This project contains a collection of SQL queries executed on the MySQL World Sample Database using MySQL Workbench.
+
+# 🛠 Tools Used
+
+- MySQL Workbench
+- MySQL (World Sample Database)
+- SQL (Structured Query Language)
+  
+# 📁 Tables Used
+
+- city
+- country
+  
+# 📊 Sample Queries
+
+# 1. Count Cities in the USA
+SELECT COUNT(Name), CountryCode
+FROM city
+WHERE CountryCode = 'USA';
+- 📌 Result: 274 cities in the USA.
+
+# 2. Countries by Highest Life Expectancy
+SELECT Name, lifeExpectancy
+FROM country
+ORDER BY lifeExpectancy DESC;
+- 📌 Result: Top countries include Andorra, Macao, San Marino, Japan, etc.
+
+# 3. Top 10 Most Populated Cities
+SELECT name, population
+FROM city
+ORDER BY population DESC
+LIMIT 10;
+- 📌 Result: Cities like Mumbai, Seoul, São Paulo, Shanghai, etc.
+
+# 📌 Notes
+
+Be sure to check for column names and case sensitivity in queries.
+Use aliases for better readability in complex queries.
+This project is for SQL learning and demonstration purposes.
+# 📷 Screenshots
+
+Query outputs are demonstrated in the screenshots located in the repository's /screenshots folder.
+
+# 📄 License
+
+This project is open source and available under the MIT License.
+
+
+
+
+
 
 
 
